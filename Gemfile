@@ -1,29 +1,31 @@
 source 'https://rubygems.org'
 
-
-
 gem 'rails',       '5.1.4'
+#slim
+gem 'slim-rails'
+gem 'html2slim'
 gem 'puma',        '3.9.1'
-gem 'sass-rails',  '5.0.6'
+gem 'erubis'
+gem 'bootstrap-sass'
+gem 'sass-rails', '~> 5.0.6'
 gem 'uglifier',    '3.2.0'
 gem 'coffee-rails','4.2.2'
+gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails','4.3.1'
-gem 'turbolinks', '5.0.1'
 gem 'jbuilder',    '2.7.0'
+gem 'pg','0.18.4'
 
 
-
-group :deveropment, :test do
-  gem 'sqlite3','1.3.13'
-  gem 'byebug', '9.0.6', platform: :mri
+group :development, :test do
+ gem 'pry-rails'
+ gem 'pry-byebug'
+ gem 'pry-doc'
 end
 
-
-group :deveropment do
-  gem 'web-console',            '3.5.1'
-  gem 'listen',                 '3.1.5'
-  gem 'spring',                 '2.0.2'
-  gem 'spring-watcher-listen',  '2.0.1'
+group :development do
+ # Access an IRB console on exception pages or by using <%= console %> in views
+ gem 'web-console', '~> 2.0'
+ gem 'listen'
 end
 
 group:test do
@@ -33,10 +35,6 @@ group:test do
   gem'guard-minitest',    '2.4.4'
 end
 
-
 group :production do
-  gem 'pg','0.18.4'
-  
+ gem 'rails_12factor', '0.0.2'
 end
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
