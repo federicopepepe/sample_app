@@ -11,7 +11,3 @@ development:
 test:
  <<: *default
  database: sample_app_test
-
-production:
- <<: *default_app_production
- 

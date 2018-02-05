@@ -14,6 +14,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails','4.3.1'
 gem 'jbuilder',    '2.7.0'
 gem 'pg','0.18.4'
+gem 'turbolinks'
 
 
 group :development, :test do
